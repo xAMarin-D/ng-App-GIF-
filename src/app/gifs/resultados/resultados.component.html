@@ -1,0 +1,29 @@
+
+
+<!--
+<ul>
+    <li *ngFor = "let itemGif of resultados">
+    {{ itemGif.title}}
+    </li>
+</ul>
+-->
+
+
+<div class="row">
+    <div *ngFor = "let itemGif of resultados"
+             class= "col-md-4 col-sm-6 animate__animated animate__fadeIn animate__delay-0.8s">
+
+        <div class="card">
+            <!-- Para que angular estableszca el valor del source o src desde su fuente se pone entre corchetes para que sepa si es string, number o etc etc-->
+            <img [src]="itemGif.images.downsized_medium.url"
+                 [alt]="itemGif.title"
+                 class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                        {{itemGif.title}}
+                        <!--{{itemGif.images.downsized_medium.url}}-->
+                        </p>
+                    </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class= "bg-dark border-right p-3" id="sidebar">
+    <h3 
+      class="text-light"
+      style="text-align: center;">
+      Gifs Ficha
+    </h3>
+
+    <hr clas="text-white">
+    <hr clas="text-white">
+
+    <div class="list-group list-reset">
+
+      <a
+      *ngFor = " let newItem of historial" 
+      (click)="buscar( newItem )"
+      href="#"
+      class="list-group-item list-group-item-action">
+      {{newItem | titlecase}}
+      </a>
+
+     
+
+    </div>
+  </div>
